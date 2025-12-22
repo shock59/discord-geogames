@@ -1,13 +1,15 @@
 import { SlashCommandBuilder } from "discord.js";
 import flags from "./quizzes/flags.js";
+import anthems from "./quizzes/anthems.js";
 
-const subcommands = [flags];
+const subcommands = [flags, anthems];
 
 const quiz: SlashCommand = {
   data: new SlashCommandBuilder()
     .setName("quiz")
     .setDescription(".")
-    .addSubcommand(flags.data),
+    .addSubcommand(flags.data)
+    .addSubcommand(anthems.data),
   async execute(interaction) {
     const option = interaction.command?.options[0];
     if (option?.type != 1) {
