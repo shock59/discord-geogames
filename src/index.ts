@@ -14,7 +14,7 @@ client.once(Events.ClientReady, async (readyClient) => {
 });
 
 client.on(Events.InteractionCreate, async (interaction) => {
-  if (interaction.isCommand()) {
+  if (interaction.isChatInputCommand()) {
     const command = commands.find(
       (command) => command.data.name == interaction.command?.name
     );

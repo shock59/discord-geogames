@@ -11,13 +11,9 @@ const quiz: SlashCommand = {
     .addSubcommand(flags.data)
     .addSubcommand(anthems.data),
   async execute(interaction) {
-    const option = interaction.command?.options[0];
-    if (option?.type != 1) {
-      await interaction.reply("Error: invalid command");
-      return;
-    }
+    const option = interaction.options.getSubcommand();
     const subcommand = subcommands.find(
-      (subcommand) => subcommand.data.name == option.name
+      (subcommand) => subcommand.data.name == option
     );
     if (!subcommand) {
       await interaction.reply("Error: invalid command");
