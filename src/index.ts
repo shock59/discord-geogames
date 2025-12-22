@@ -1,7 +1,8 @@
 import { Client, Events, GatewayIntentBits } from "discord.js";
 import info from "./commands/info.js";
+import quiz from "./commands/quiz.js";
 
-const commands = [info];
+const commands = [info, quiz];
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.once(Events.ClientReady, async (readyClient) => {
@@ -21,6 +22,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
       await interaction.reply("Error: invalid command");
       return;
     }
+
     command.execute(interaction);
   }
 });

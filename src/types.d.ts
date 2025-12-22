@@ -4,6 +4,10 @@ import type {
 } from "discord.js";
 
 type SlashCommand = {
-  data: JSONEncodable<RESTPostAPIApplicationCommandsJSONBody>;
+  data: SlashCommandBuilder;
+  execute: (interaction: CommandInteraction) => void;
+};
+type Subcommand = {
+  data: SlashCommandSubcommandBuilder;
   execute: (interaction: CommandInteraction) => void;
 };
