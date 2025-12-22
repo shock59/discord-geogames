@@ -1,5 +1,4 @@
 import { SlashCommandBuilder } from "discord.js";
-import type { SlashCommand } from "../types.js";
 import flags from "./quizzes/flags.js";
 
 const subcommands = [flags];

@@ -1,5 +1,4 @@
 import { SlashCommandSubcommandBuilder } from "discord.js";
-import type { Subcommand } from "../../types.js";
 
 const flags: Subcommand = {
   data: new SlashCommandSubcommandBuilder()
