@@ -10,12 +10,18 @@ import {
   TextDisplayBuilder,
   type MessageActionRowComponentBuilder,
 } from "discord.js";
+import { multipleRandomFromArray, shuffleArray } from "../../lib/arrays.js";
+import countries from "../../countries.js";
 
 const flags: Subcommand = {
   data: new SlashCommandSubcommandBuilder()
     .setName("flags")
     .setDescription("Do a flag quiz with others in the server!"),
   execute(interaction) {
+    const choices = multipleRandomFromArray(countries, 4, true);
+    const correctCountry = choices[0]!;
+    const shuffledChoices = shuffleArray(choices);
+
     const components = [
       new ContainerBuilder()
         .addTextDisplayComponents(
@@ -24,28 +30,18 @@ const flags: Subcommand = {
         .addMediaGalleryComponents(
           new MediaGalleryBuilder().addItems(
             new MediaGalleryItemBuilder().setURL(
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/960px-Flag_of_Australia_%28converted%29.svg.png"
+              `https://flagcdn.com/h240/${correctCountry.iso}.webp`
             )
           )
         )
         .addActionRowComponents(
           new ActionRowBuilder<MessageActionRowComponentBuilder>().addComponents(
-            new ButtonBuilder()
-              .setStyle(ButtonStyle.Secondary)
-              .setLabel("Australia")
-              .setCustomId("6e7147e04cf24f798868833a1c4b9b8b"),
-            new ButtonBuilder()
-              .setStyle(ButtonStyle.Secondary)
-              .setLabel("France")
-              .setCustomId("9e9228f18bc54856c004f09c34935c45"),
-            new ButtonBuilder()
-              .setStyle(ButtonStyle.Secondary)
-              .setLabel("United Kingdom")
-              .setCustomId("193141ed52d94d52e569ae282bc032e4"),
-            new ButtonBuilder()
-              .setStyle(ButtonStyle.Secondary)
-              .setLabel("United States")
-              .setCustomId("25fbf203f5294c17a23f896355081dbd")
+            ...shuffledChoices.map((country) =>
+              new ButtonBuilder()
+                .setStyle(ButtonStyle.Primary)
+                .setLabel(country.name)
+                .setCustomId(country.iso)
+            )
           )
         ),
     ];
