@@ -1,8 +1,3 @@
-type Country = {
-  name: string;
-  iso: string;
-};
-
 const countries: Country[] = [
   {
     name: "Afghanistan",

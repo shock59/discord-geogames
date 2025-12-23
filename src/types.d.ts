@@ -12,3 +12,7 @@ type Subcommand = {
     interaction: import("discord.js").ChatInputCommandInteraction
   ) => void;
 };
+type Country = {
+  name: string;
+  iso: string;
+};
