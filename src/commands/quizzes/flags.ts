@@ -9,6 +9,7 @@ import {
   MessageFlags,
   SectionBuilder,
   SeparatorBuilder,
+  SlashCommandIntegerOption,
   SlashCommandSubcommandBuilder,
   TextDisplayBuilder,
   ThumbnailBuilder,
@@ -25,9 +26,15 @@ function flagUrl(iso: string) {
 const flags: Subcommand = {
   data: new SlashCommandSubcommandBuilder()
     .setName("flags")
-    .setDescription("Do a flag quiz with others in the server!"),
+    .setDescription("Do a flag quiz with others in the server!")
+    .addIntegerOption(
+      new SlashCommandIntegerOption()
+        .setName("time")
+        .setDescription("The amount of time available to answer the quiz.")
+        .setRequired(false)
+    ),
   async execute(interaction) {
-    const time = 15;
+    const time = interaction.options.getInteger("time", false) ?? 15;
 
     const choices = multipleRandomFromArray(countries, 4, true);
     const correctCountry = choices[0]!;
@@ -58,7 +65,7 @@ const flags: Subcommand = {
             `Ending <t:${Math.floor(Date.now() / 1000) + time}:R>`
           )
         )
-        .addSeparatorComponents(new SeparatorBuilder().setDivider(true))
+        .addSeparatorComponents(new SeparatorBuilder())
         .addTextDisplayComponents(
           new TextDisplayBuilder().setContent(
             "-# Flag images sourced from [Flagpedia.net](https://flagpedia.net)"
@@ -126,6 +133,21 @@ const flags: Subcommand = {
                 )
               )
           )
+          .addActionRowComponents(
+            new ActionRowBuilder<MessageActionRowComponentBuilder>().addComponents(
+              ...shuffledChoices.map((country) => {
+                const correct = country.iso == correctCountry.iso;
+
+                return new ButtonBuilder()
+                  .setStyle(ButtonStyle.Secondary)
+                  .setLabel(country.name)
+                  .setCustomId(country.iso)
+                  .setEmoji({ name: correct ? "✅" : "❌" })
+                  .setDisabled(true);
+              })
+            )
+          )
+          .addSeparatorComponents(new SeparatorBuilder().setDivider(false))
           .addTextDisplayComponents(
             new TextDisplayBuilder().setContent(
               responses.length
@@ -146,7 +168,16 @@ const flags: Subcommand = {
                 : "Nobody chose an answer."
             )
           )
-          .addSeparatorComponents(new SeparatorBuilder().setDivider(true))
+          .addSeparatorComponents(new SeparatorBuilder().setDivider(false))
+          .addActionRowComponents(
+            new ActionRowBuilder<MessageActionRowComponentBuilder>().addComponents(
+              new ButtonBuilder()
+                .setStyle(ButtonStyle.Primary)
+                .setLabel("Play again")
+                .setCustomId("playAgain")
+            )
+          )
+          .addSeparatorComponents(new SeparatorBuilder())
           .addTextDisplayComponents(
             new TextDisplayBuilder().setContent(
               "-# Flags sourced from [Flagpedia.net](https://flagpedia.net)"
