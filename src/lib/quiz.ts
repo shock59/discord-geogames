@@ -255,9 +255,7 @@ function resultsContainer(
     container
       .addSeparatorComponents(new SeparatorBuilder())
       .addTextDisplayComponents(
-        new TextDisplayBuilder().setContent(
-          "-# Flags sourced from [Flagpedia.net](https://flagpedia.net)"
-        )
+        new TextDisplayBuilder().setContent(`-# ${correctChoice.attribution}`)
       );
   }
 
