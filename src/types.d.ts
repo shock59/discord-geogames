@@ -12,7 +12,18 @@ type Subcommand = {
     interaction: import("discord.js").ChatInputCommandInteraction
   ) => void;
 };
+type AnthemAudio = {
+  src: string;
+  attribution: string;
+};
 type Country = {
   name: string;
   iso: string;
+  anthem?: {
+    name: string;
+    translatedName?: string;
+    audio: {
+      instrumental?: AnthemAudio;
+    };
+  };
 };

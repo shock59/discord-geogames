@@ -28,7 +28,8 @@ const flags: Subcommand = {
             "Flag images sourced from [Flagpedia.net](https://flagpedia.net)",
         })),
       "image",
-      "Guess the country flag"
+      "Guess the country flag",
+      false
     );
   },
 };

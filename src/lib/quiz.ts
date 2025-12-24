@@ -18,10 +18,11 @@ import {
 } from "discord.js";
 import { shuffleArray } from "./arrays.js";
 
-type QuestionType = "image";
+type QuestionType = "image" | "video";
 type Choice = {
   id: string;
   displayName: string;
+  answerDisplayName?: string;
   imageUrl?: string;
   attribution?: string;
 };
@@ -33,6 +34,7 @@ export default async function quiz(
   getChoices: () => Choice[],
   questionType: QuestionType,
   prompt: string,
+  secretAttribution: boolean,
   time: number = 15
 ) {
   if (sessions.includes(interaction.channelId)) {
@@ -55,7 +57,7 @@ export default async function quiz(
   const container = new ContainerBuilder().addTextDisplayComponents(
     new TextDisplayBuilder().setContent(`## ${prompt}`)
   );
-  if (questionType == "image") {
+  if (["image", "video"].includes(questionType)) {
     container.addMediaGalleryComponents(
       new MediaGalleryBuilder().addItems(
         new MediaGalleryItemBuilder().setURL(correctChoice.imageUrl ?? "")
@@ -80,7 +82,7 @@ export default async function quiz(
       )
     );
 
-  if (correctChoice.attribution) {
+  if (!secretAttribution && correctChoice.attribution) {
     container
       .addSeparatorComponents(new SeparatorBuilder())
       .addTextDisplayComponents(
@@ -163,7 +165,14 @@ export default async function quiz(
         flags: MessageFlags.IsComponentsV2,
         allowedMentions: { parse: [] },
       });
-      await quiz(newInteraction, getChoices, questionType, prompt, time);
+      await quiz(
+        newInteraction,
+        getChoices,
+        questionType,
+        prompt,
+        secretAttribution,
+        time
+      );
     });
 
     collector.on("end", async () => {
@@ -193,18 +202,39 @@ function resultsContainer(
   }[],
   disablePlayAgain: boolean
 ) {
-  const section = new SectionBuilder().addTextDisplayComponents(
-    new TextDisplayBuilder().setContent(`The correct answer was`),
-    new TextDisplayBuilder().setContent(`### ${correctChoice.displayName}`)
-  );
+  const container = new ContainerBuilder();
+
   if (questionType == "image") {
+    const section = new SectionBuilder().addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(`The correct answer was`),
+      new TextDisplayBuilder().setContent(
+        `### ${correctChoice.answerDisplayName ?? correctChoice.displayName}`
+      )
+    );
     section.setThumbnailAccessory(
       new ThumbnailBuilder().setURL(correctChoice.imageUrl ?? "")
     );
+
+    container.addSectionComponents(section);
+  }
+  if (questionType == "video") {
+    container
+      .addTextDisplayComponents(
+        new TextDisplayBuilder().setContent(`The correct answer was`),
+        new TextDisplayBuilder().setContent(
+          `### ${correctChoice.answerDisplayName ?? correctChoice.displayName}`
+        )
+      )
+      .addMediaGalleryComponents(
+        new MediaGalleryBuilder().addItems(
+          new MediaGalleryItemBuilder().setURL(correctChoice.imageUrl ?? "")
+        )
+      );
+
+    console.log(container.toJSON().components.toString());
   }
 
-  const container = new ContainerBuilder()
-    .addSectionComponents(section)
+  container
     .addActionRowComponents(
       new ActionRowBuilder<MessageActionRowComponentBuilder>().addComponents(
         ...shuffledChoices.map((choice) => {
