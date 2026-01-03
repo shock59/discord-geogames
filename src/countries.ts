@@ -1,8 +1,10 @@
+const obvious = true;
 const countries: Country[] = [
-  { name: "Afghanistan", iso: "af" },
+  { name: "Afghanistan", iso: "af", capital: { name: "Kabul" } },
   {
     name: "Albania",
     iso: "al",
+    capital: { name: "Tirana" },
     anthem: {
       name: "Himni i Flamurit",
       translatedName: "Hymn to the Flag",
@@ -18,6 +20,7 @@ const countries: Country[] = [
   {
     name: "Algeria",
     iso: "dz",
+    capital: { name: "Algiers" },
     anthem: {
       name: "قَسَمًا",
       translatedName: "We Pledge",
@@ -33,6 +36,7 @@ const countries: Country[] = [
   {
     name: "Andorra",
     iso: "ad",
+    capital: { name: "Andorra la Vella", obvious },
     anthem: {
       name: "El gran Carlemany",
       translatedName: "The Great Charlemagne",
@@ -48,6 +52,7 @@ const countries: Country[] = [
   {
     name: "Angola",
     iso: "ao",
+    capital: { name: "Luanda" },
     anthem: {
       name: "Angola Avante",
       translatedName: "Onwards Angola",
@@ -77,6 +82,7 @@ const countries: Country[] = [
   {
     name: "Argentina",
     iso: "ar",
+    capital: { name: "Buenos Aires" },
     anthem: {
       name: "Himno Nacional Argentino",
       translatedName: "Argentine National Anthem",
@@ -92,6 +98,7 @@ const countries: Country[] = [
   {
     name: "Armenia",
     iso: "am",
+    capital: { name: "Yerevan" },
     anthem: {
       name: "Մեր Հայրենիք",
       translatedName: "Our Fatherland",
@@ -107,6 +114,7 @@ const countries: Country[] = [
   {
     name: "Australia",
     iso: "au",
+    capital: { name: "Canberra" },
     anthem: {
       name: "Advance Australia Fair",
       audio: {
@@ -121,6 +129,7 @@ const countries: Country[] = [
   {
     name: "Austria",
     iso: "at",
+    capital: { name: "Vienna" },
     anthem: {
       name: "Bundeshymne der Republik Österreich",
       translatedName: "National Anthem of the Republic of Austria",
@@ -136,6 +145,7 @@ const countries: Country[] = [
   {
     name: "Azerbaijan",
     iso: "az",
+    capital: { name: "Baku" },
     anthem: {
       name: "Azərbaycan Respublikasının Dövlət Himni",
       translatedName: "State Anthem of the Republic of Azerbaijan",
@@ -151,6 +161,7 @@ const countries: Country[] = [
   {
     name: "Bahrain",
     iso: "bh",
+    capital: { name: "Manama" },
     anthem: {
       name: "بحريننا",
       translatedName: "Our Bahrain",
@@ -166,6 +177,7 @@ const countries: Country[] = [
   {
     name: "Bangladesh",
     iso: "bd",
+    capital: { name: "Dhaka" },
     anthem: {
       name: "আমার সোনার বাংলা",
       translatedName: "My Golden Bengal",
@@ -181,6 +193,7 @@ const countries: Country[] = [
   {
     name: "Barbados",
     iso: "bb",
+    capital: { name: "Bridgetown" },
     anthem: {
       name: "In Plenty and In Time of Need",
       audio: {
@@ -195,6 +208,7 @@ const countries: Country[] = [
   {
     name: "Belarus",
     iso: "by",
+    capital: { name: "Minsk" },
     anthem: {
       name: "Дзяржаўны гімн Рэспублікі Беларусь",
       translatedName: "State Anthem of the Republic of Belarus",
@@ -210,6 +224,7 @@ const countries: Country[] = [
   {
     name: "Belgium",
     iso: "be",
+    capital: { name: "Brussels" },
     anthem: {
       name: "La Brabançonne",
       translatedName: "The Brabantian",
@@ -225,6 +240,7 @@ const countries: Country[] = [
   {
     name: "Belize",
     iso: "bz",
+    capital: { name: "Belmopan" },
     anthem: {
       name: "Land of the Free",
       audio: {
@@ -239,6 +255,7 @@ const countries: Country[] = [
   {
     name: "Benin",
     iso: "bj",
+    capital: { name: "Porto-Novo", hangmanName: "Porto Novo" },
     anthem: {
       name: "L'Aube nouvelle",
       translatedName: "The Dawn of a New Day",
@@ -254,6 +271,7 @@ const countries: Country[] = [
   {
     name: "Bhutan",
     iso: "bt",
+    capital: { name: "Thimphu" },
     anthem: {
       name: "འབྲུག་ཙན་དན",
       translatedName: "The Thunder Dragon Kingdom",
@@ -269,6 +287,7 @@ const countries: Country[] = [
   {
     name: "Bolivia",
     iso: "bo",
+    capital: { name: "Sucre" },
     anthem: {
       name: "Himno Nacional de Bolivia",
       translatedName: "National Anthem of Bolivia",
@@ -284,6 +303,7 @@ const countries: Country[] = [
   {
     name: "Bosnia and Herzegovina",
     iso: "ba",
+    capital: { name: "Sarajevo" },
     anthem: {
       name: "Državna himna Bosne i Hercegovine",
       translatedName: "National Anthem of Bosnia and Herzegovina",
@@ -299,6 +319,7 @@ const countries: Country[] = [
   {
     name: "Botswana",
     iso: "bw",
+    capital: { name: "Gaborone" },
     anthem: {
       name: "Fatshe leno la rona",
       translatedName: "Blessed Be This Noble Land",
@@ -314,6 +335,7 @@ const countries: Country[] = [
   {
     name: "Brazil",
     iso: "br",
+    capital: { name: "Brasília", hangmanName: "Brasilia", obvious },
     anthem: {
       name: "Hino Nacional Brasileiro",
       translatedName: "Brazilian National Anthem",
@@ -329,6 +351,7 @@ const countries: Country[] = [
   {
     name: "Brunei",
     iso: "bn",
+    capital: { name: "Bandar Seri Begawan" },
     anthem: {
       name: "الله ڤليهاراكن سلطان",
       translatedName: "God Bless the Sultan",
@@ -344,6 +367,7 @@ const countries: Country[] = [
   {
     name: "Bulgaria",
     iso: "bg",
+    capital: { name: "Sofia" },
     anthem: {
       name: "Мила Родино",
       translatedName: "Dear Motherland",
@@ -359,6 +383,7 @@ const countries: Country[] = [
   {
     name: "Burkina Faso",
     iso: "bf",
+    capital: { name: "Ouagadougou" },
     anthem: {
       name: "Le Ditanyè",
       translatedName: "The Anthem of Victory",
@@ -374,6 +399,7 @@ const countries: Country[] = [
   {
     name: "Burundi",
     iso: "bi",
+    capital: { name: "Gitega" },
     anthem: {
       name: "Burundi Bwacu",
       translatedName: "Our Burundi",
@@ -389,6 +415,7 @@ const countries: Country[] = [
   {
     name: "Cape Verde",
     iso: "cv",
+    capital: { name: "Praia" },
     anthem: {
       name: "Cântico da Liberdade",
       translatedName: "Chant of Liberty",
@@ -404,6 +431,7 @@ const countries: Country[] = [
   {
     name: "Cambodia",
     iso: "kh",
+    capital: { name: "Phnom Penh" },
     anthem: {
       name: "នគររាជ",
       translatedName: "Majestic Kingdom",
@@ -419,6 +447,7 @@ const countries: Country[] = [
   {
     name: "Cameroon",
     iso: "cm",
+    capital: { name: "Yaoundé", hangmanName: "Yaounde" },
     anthem: {
       name: "Chant de Ralliement",
       translatedName: "The Rallying Song",
@@ -434,6 +463,7 @@ const countries: Country[] = [
   {
     name: "Canada",
     iso: "ca",
+    capital: { name: "Ottawa" },
     anthem: {
       name: "O Canada",
       audio: {
@@ -448,6 +478,7 @@ const countries: Country[] = [
   {
     name: "Central African Republic",
     iso: "cf",
+    capital: { name: "Bangui" },
     anthem: {
       name: "La Renaissance",
       translatedName: "The Renaissance",
@@ -463,6 +494,7 @@ const countries: Country[] = [
   {
     name: "Chad",
     iso: "td",
+    capital: { name: "N'Djamena", hangmanName: "NDjamena" },
     anthem: {
       name: "La Tchadienne",
       translatedName: "Song of the Chadian",
@@ -478,6 +510,7 @@ const countries: Country[] = [
   {
     name: "Chile",
     iso: "cl",
+    capital: { name: "Santiago" },
     anthem: {
       name: "Himno Nacional de Chile",
       translatedName: "National Anthem of Chile",
@@ -493,6 +526,7 @@ const countries: Country[] = [
   {
     name: "China",
     iso: "cn",
+    capital: { name: "Beijing" },
     anthem: {
       name: "义勇军进行曲",
       translatedName: "March of the Volunteers",
@@ -508,6 +542,7 @@ const countries: Country[] = [
   {
     name: "Colombia",
     iso: "co",
+    capital: { name: "Bogotá", hangmanName: "Bogota" },
     anthem: {
       name: "Himno Nacional de la República de Colombia",
       translatedName: "National Anthem of the Republic of Colombia",
@@ -523,6 +558,7 @@ const countries: Country[] = [
   {
     name: "Comoros",
     iso: "km",
+    capital: { name: "Moroni" },
     anthem: {
       name: "Udzima wa ya Masiwa",
       translatedName: "The Union of the Great Islands",
@@ -538,6 +574,7 @@ const countries: Country[] = [
   {
     name: "Costa Rica",
     iso: "cr",
+    capital: { name: "San José", hangmanName: "San Jose" },
     anthem: {
       name: "Himno Nacional de la República de Costa Rica",
       translatedName: "National Anthem of the Republic of Costa Rica",
@@ -553,6 +590,7 @@ const countries: Country[] = [
   {
     name: "Croatia",
     iso: "hr",
+    capital: { name: "Zagreb" },
     anthem: {
       name: "Lijepa naša domovino",
       translatedName: "Our Beautiful Homeland",
@@ -568,6 +606,7 @@ const countries: Country[] = [
   {
     name: "Cuba",
     iso: "cu",
+    capital: { name: "Havana" },
     anthem: {
       name: "La Bayamesa",
       translatedName: "The Bayamo Anthem",
@@ -580,10 +619,11 @@ const countries: Country[] = [
       },
     },
   },
-  { name: "Cyprus", iso: "cy" },
+  { name: "Cyprus", iso: "cy", capital: { name: "Nicosia" } },
   {
     name: "Czechia",
     iso: "cz",
+    capital: { name: "Prague" },
     anthem: {
       name: "Kde domov můj",
       translatedName: "Where My Home Is",
@@ -599,6 +639,7 @@ const countries: Country[] = [
   {
     name: "Democratic Republic of the Congo",
     iso: "cd",
+    capital: { name: "Kinshasa" },
     anthem: {
       name: "Debout Congolais",
       translatedName: "Arise Congolese",
@@ -614,6 +655,7 @@ const countries: Country[] = [
   {
     name: "Denmark",
     iso: "dk",
+    capital: { name: "Copenhagen" },
     anthem: {
       name: "Der er et yndigt land",
       translatedName: "There Is a Lovely Land",
@@ -629,6 +671,7 @@ const countries: Country[] = [
   {
     name: "Djibouti",
     iso: "dj",
+    capital: { name: "Djibouti City", obvious },
     anthem: {
       name: "Djibouti",
       audio: {
@@ -643,6 +686,7 @@ const countries: Country[] = [
   {
     name: "Dominica",
     iso: "dm",
+    capital: { name: "Roseau" },
     anthem: {
       name: "Isle of Beauty, Isle of Splendour",
       audio: {
@@ -657,6 +701,7 @@ const countries: Country[] = [
   {
     name: "Dominican Republic",
     iso: "do",
+    capital: { name: "Santo Domingo" },
     anthem: {
       name: "Himno nacional de República Dominicana",
       translatedName: "National Anthem of the Dominican Republic",
@@ -672,6 +717,7 @@ const countries: Country[] = [
   {
     name: "Ecuador",
     iso: "ec",
+    capital: { name: "Quito" },
     anthem: {
       name: "¡Salve, Oh Patria!",
       translatedName: "Hail, Oh Fatherland!",
@@ -687,6 +733,7 @@ const countries: Country[] = [
   {
     name: "Egypt",
     iso: "eg",
+    capital: { name: "Cairo" },
     anthem: {
       name: "بلادي بلادي بلادي",
       translatedName: "My homeland, my homeland, my homeland",
@@ -702,6 +749,7 @@ const countries: Country[] = [
   {
     name: "El Salvador",
     iso: "sv",
+    capital: { name: "San Salvador", obvious },
     anthem: {
       name: "Himno Nacional de El Salvador",
       translatedName: "National Anthem of El Salvador",
@@ -717,6 +765,7 @@ const countries: Country[] = [
   {
     name: "Equatorial Guinea",
     iso: "gq",
+    capital: { name: "Malabo" },
     anthem: {
       name: "Caminemos pisando las sendas de nuestra inmensa felicidad",
       translatedName: "Let Us Walk Treading the Paths of Our Immense Happiness",
@@ -732,6 +781,7 @@ const countries: Country[] = [
   {
     name: "Eritrea",
     iso: "er",
+    capital: { name: "Asmara" },
     anthem: {
       name: "ኤርትራ ኤርትራ ኤርትራ",
       translatedName: "Eritrea, Eritrea, Eritrea",
@@ -747,6 +797,7 @@ const countries: Country[] = [
   {
     name: "Estonia",
     iso: "ee",
+    capital: { name: "Tallinn" },
     anthem: {
       name: "Mu isamaa, mu õnn ja rõõm",
       translatedName: "My Fatherland, My Happiness and Joy",
@@ -762,6 +813,7 @@ const countries: Country[] = [
   {
     name: "Eswatini",
     iso: "sz",
+    capital: { name: "Mbabane" },
     anthem: {
       name: "Nkulunkulu Mnikati wetibusiso temaSwati",
       translatedName: "God, the Giver of blessings to the Swati people",
@@ -777,6 +829,7 @@ const countries: Country[] = [
   {
     name: "Ethiopia",
     iso: "et",
+    capital: { name: "Addis Ababa" },
     anthem: {
       name: "ወደፊት ገስግሺ ውድ እናት ኢትዮጵያ",
       translatedName: "March Forward, Dear Mother Ethiopia",
@@ -792,6 +845,7 @@ const countries: Country[] = [
   {
     name: "Fiji",
     iso: "fj",
+    capital: { name: "Suva" },
     anthem: {
       name: "Meda dau doka",
       translatedName: "God Bless Fiji",
@@ -807,6 +861,7 @@ const countries: Country[] = [
   {
     name: "Finland",
     iso: "fi",
+    capital: { name: "Helsinki" },
     anthem: {
       name: "Maamme",
       translatedName: "Our Land",
@@ -822,6 +877,7 @@ const countries: Country[] = [
   {
     name: "France",
     iso: "fr",
+    capital: { name: "Paris" },
     anthem: {
       name: "La Marseillaise",
       translatedName: "The Song of Marseille",
@@ -837,6 +893,7 @@ const countries: Country[] = [
   {
     name: "Gabon",
     iso: "ga",
+    capital: { name: "Libreville" },
     anthem: {
       name: "La Concorde",
       translatedName: "The Concorde",
@@ -852,6 +909,7 @@ const countries: Country[] = [
   {
     name: "Georgia",
     iso: "ge",
+    capital: { name: "Tbilisi" },
     anthem: {
       name: "თავისუფლება",
       translatedName: "Freedom",
@@ -867,6 +925,7 @@ const countries: Country[] = [
   {
     name: "Germany",
     iso: "de",
+    capital: { name: "Berlin" },
     anthem: {
       name: "Deutschlandlied",
       translatedName: "Germany Song",
@@ -882,6 +941,7 @@ const countries: Country[] = [
   {
     name: "Ghana",
     iso: "gh",
+    capital: { name: "Accra" },
     anthem: {
       name: "God Bless Our Homeland Ghana",
       audio: {
@@ -896,6 +956,7 @@ const countries: Country[] = [
   {
     name: "Greece",
     iso: "gr",
+    capital: { name: "Athens" },
     anthem: {
       name: "Ύμνος εις την Ελευθερίαν",
       translatedName: "Hymn to Liberty",
@@ -911,6 +972,7 @@ const countries: Country[] = [
   {
     name: "Grenada",
     iso: "gd",
+    capital: { name: "St. George's", hangmanName: "St Georges" },
     anthem: {
       name: "Hail Grenada",
       audio: {
@@ -925,6 +987,7 @@ const countries: Country[] = [
   {
     name: "Guatemala",
     iso: "gt",
+    capital: { name: "Guatemala City", obvious },
     anthem: {
       name: "Himno Nacional de Guatemala",
       translatedName: "National Anthem of Guatemala",
@@ -940,6 +1003,7 @@ const countries: Country[] = [
   {
     name: "Guinea",
     iso: "gn",
+    capital: { name: "Conakry" },
     anthem: {
       name: "Liberté",
       translatedName: "Freedom",
@@ -955,6 +1019,7 @@ const countries: Country[] = [
   {
     name: "Guinea-Bissau",
     iso: "gw",
+    capital: { name: "Bissau", obvious },
     anthem: {
       name: "Esta É a Nossa Pátria Bem Amada",
       translatedName: "This Is Our Well Beloved Fatherland",
@@ -970,6 +1035,7 @@ const countries: Country[] = [
   {
     name: "Guyana",
     iso: "gy",
+    capital: { name: "Georgetown" },
     anthem: {
       name: "Green Land of Guyana",
       audio: {
@@ -984,6 +1050,7 @@ const countries: Country[] = [
   {
     name: "Haiti",
     iso: "ht",
+    capital: { name: "Port-au-Prince", hangmanName: "Port au Prince" },
     anthem: {
       name: "La Dessalinienne",
       translatedName: "The Dessaline",
@@ -999,6 +1066,7 @@ const countries: Country[] = [
   {
     name: "Honduras",
     iso: "hn",
+    capital: { name: "Tegucigalpa" },
     anthem: {
       name: "Himno Nacional de Honduras",
       translatedName: "National Anthem of Honduras",
@@ -1014,6 +1082,7 @@ const countries: Country[] = [
   {
     name: "Hungary",
     iso: "hu",
+    capital: { name: "Budapest" },
     anthem: {
       name: "Himnusz",
       translatedName: "Anthem",
@@ -1029,6 +1098,7 @@ const countries: Country[] = [
   {
     name: "Iceland",
     iso: "is",
+    capital: { name: "Reykjavík", hangmanName: "Reykjavik" },
     anthem: {
       name: "Lofsöngur",
       translatedName: "Hymn",
@@ -1044,6 +1114,7 @@ const countries: Country[] = [
   {
     name: "India",
     iso: "in",
+    capital: { name: "New Delhi" },
     anthem: {
       name: "Jana Gana Mana",
       translatedName: "The Minds of All People",
@@ -1059,6 +1130,7 @@ const countries: Country[] = [
   {
     name: "Indonesia",
     iso: "id",
+    capital: { name: "Jakarta" },
     anthem: {
       name: "Indonesia Raya",
       translatedName: "Indonesia the Great",
@@ -1074,6 +1146,7 @@ const countries: Country[] = [
   {
     name: "Iran",
     iso: "ir",
+    capital: { name: "Tehran" },
     anthem: {
       name: "سرود ملی جمهوری اسلامی ایران",
       translatedName: "National Anthem of the Islamic Republic of Iran",
@@ -1089,6 +1162,7 @@ const countries: Country[] = [
   {
     name: "Iraq",
     iso: "iq",
+    capital: { name: "Baghdad" },
     anthem: {
       name: "موطني",
       translatedName: "My Homeland",
@@ -1104,6 +1178,7 @@ const countries: Country[] = [
   {
     name: "Ireland",
     iso: "ie",
+    capital: { name: "Dublin" },
     anthem: {
       name: "Amhrán na bhFiann",
       translatedName: "The Soldier's Song",
@@ -1134,6 +1209,7 @@ const countries: Country[] = [
   {
     name: "Italy",
     iso: "it",
+    capital: { name: "Rome" },
     anthem: {
       name: "Il Canto degli Italiani",
       translatedName: "The Song of the Italians",
@@ -1149,6 +1225,7 @@ const countries: Country[] = [
   {
     name: "Ivory Coast",
     iso: "ci",
+    capital: { name: "Yamoussoukro" },
     anthem: {
       name: "L'Abidjanaise",
       translatedName: "The Song of Abidjan",
@@ -1164,6 +1241,7 @@ const countries: Country[] = [
   {
     name: "Jamaica",
     iso: "jm",
+    capital: { name: "Kingston" },
     anthem: {
       name: "Jamaica, Land We Love",
       audio: {
@@ -1178,6 +1256,7 @@ const countries: Country[] = [
   {
     name: "Japan",
     iso: "jp",
+    capital: { name: "Tokyo" },
     anthem: {
       name: "君が代",
       translatedName: "His Imperial Majesty's Reign",
@@ -1193,6 +1272,7 @@ const countries: Country[] = [
   {
     name: "Jordan",
     iso: "jo",
+    capital: { name: "Amman" },
     anthem: {
       name: "السلام الملكي الأردني",
       translatedName: "Peace be upon the King of Jordan",
@@ -1208,6 +1288,7 @@ const countries: Country[] = [
   {
     name: "Kazakhstan",
     iso: "kz",
+    capital: { name: "Astana" },
     anthem: {
       name: "Менің Қазақстаным",
       translatedName: "My Kazakhstan",
@@ -1223,6 +1304,7 @@ const countries: Country[] = [
   {
     name: "Kenya",
     iso: "ke",
+    capital: { name: "Nairobi" },
     anthem: {
       name: "Ee Mungu Nguvu Yetu",
       translatedName: "O God of all Creation",
@@ -1238,6 +1320,7 @@ const countries: Country[] = [
   {
     name: "Kiribati",
     iso: "ki",
+    capital: { name: "Tarawa" },
     anthem: {
       name: "Kunan Kiribati",
       translatedName: "Song of Kiribati",
@@ -1253,6 +1336,7 @@ const countries: Country[] = [
   {
     name: "Kosovo",
     iso: "xk",
+    capital: { name: "Pristina" },
     anthem: {
       name: "Himni i Republikës së Kosovës",
       translatedName: "Anthem of the Republic of Kosovo",
@@ -1268,6 +1352,7 @@ const countries: Country[] = [
   {
     name: "Kuwait",
     iso: "kw",
+    capital: { name: "Kuwait City", obvious },
     anthem: {
       name: "النشيد الوطني الكويتي",
       translatedName: "The National Anthem",
@@ -1283,6 +1368,7 @@ const countries: Country[] = [
   {
     name: "Kyrgyzstan",
     iso: "kg",
+    capital: { name: "Bishkek" },
     anthem: {
       name: "Кыргыз Республикасынын Мамлекеттик гимни",
       translatedName: "National Anthem of the Kyrgyz Republic",
@@ -1298,6 +1384,7 @@ const countries: Country[] = [
   {
     name: "Laos",
     iso: "la",
+    capital: { name: "Vientiane" },
     anthem: {
       name: "ເພງຊາດລາວ",
       translatedName: "Lao National Anthem",
@@ -1313,6 +1400,7 @@ const countries: Country[] = [
   {
     name: "Latvia",
     iso: "lv",
+    capital: { name: "Riga" },
     anthem: {
       name: "Dievs, svētī Latviju!",
       translatedName: "God Bless Latvia!",
@@ -1328,6 +1416,7 @@ const countries: Country[] = [
   {
     name: "Lebanon",
     iso: "lb",
+    capital: { name: "Beirut" },
     anthem: {
       name: "النشيد الوطني اللبناني",
       translatedName: "Lebanese National Anthem",
@@ -1343,6 +1432,7 @@ const countries: Country[] = [
   {
     name: "Lesotho",
     iso: "ls",
+    capital: { name: "Maseru" },
     anthem: {
       name: "Lesōthō Fatše La Bo-Ntat'a Rōna",
       translatedName: "Lesotho, Land of Our Fathers",
@@ -1358,6 +1448,7 @@ const countries: Country[] = [
   {
     name: "Liberia",
     iso: "lr",
+    capital: { name: "Monrovia" },
     anthem: {
       name: "All Hail, Liberia, Hail!",
       audio: {
@@ -1372,6 +1463,7 @@ const countries: Country[] = [
   {
     name: "Libya",
     iso: "ly",
+    capital: { name: "Tripoli" },
     anthem: {
       name: "ليبيا ليبيا ليبيا",
       translatedName: "Libya, Libya, Libya",
@@ -1384,10 +1476,11 @@ const countries: Country[] = [
       },
     },
   },
-  { name: "Liechtenstein", iso: "li" },
+  { name: "Liechtenstein", iso: "li", capital: { name: "Vaduz" } },
   {
     name: "Lithuania",
     iso: "lt",
+    capital: { name: "Vilnius" },
     anthem: {
       name: "Tautiška giesmė",
       translatedName: "National Song",
@@ -1403,6 +1496,7 @@ const countries: Country[] = [
   {
     name: "Luxembourg",
     iso: "lu",
+    capital: { name: "Luxembourg", obvious },
     anthem: {
       name: "Ons Heemecht",
       translatedName: "Our Homeland",
@@ -1418,6 +1512,7 @@ const countries: Country[] = [
   {
     name: "Madagascar",
     iso: "mg",
+    capital: { name: "Antananarivo" },
     anthem: {
       name: "Ry Tanindrazanay malala ô!",
       translatedName: "Oh, beloved land of our ancestors!",
@@ -1433,6 +1528,7 @@ const countries: Country[] = [
   {
     name: "Malawi",
     iso: "mw",
+    capital: { name: "Lilongwe" },
     anthem: {
       name: "Mlungu dalitsani Malaŵi",
       translatedName: "O God bless our land of Malawi",
@@ -1448,6 +1544,7 @@ const countries: Country[] = [
   {
     name: "Malaysia",
     iso: "my",
+    capital: { name: "Kuala Lumpur" },
     anthem: {
       name: "Negaraku",
       translatedName: "My Country",
@@ -1463,6 +1560,7 @@ const countries: Country[] = [
   {
     name: "Maldives",
     iso: "mv",
+    capital: { name: "Malé", hangmanName: "Male" },
     anthem: {
       name: "ޤައުމީ ސަލާމް",
       translatedName: "National Salute",
@@ -1478,6 +1576,7 @@ const countries: Country[] = [
   {
     name: "Mali",
     iso: "ml",
+    capital: { name: "Bamako" },
     anthem: {
       name: "Le Mali",
       translatedName: "The Mali",
@@ -1493,6 +1592,7 @@ const countries: Country[] = [
   {
     name: "Malta",
     iso: "mt",
+    capital: { name: "Valletta" },
     anthem: {
       name: "L-Innu Malti",
       translatedName: "The Maltese Hymn",
@@ -1508,6 +1608,7 @@ const countries: Country[] = [
   {
     name: "Marshall Islands",
     iso: "mh",
+    capital: { name: "Majuro" },
     anthem: {
       name: "Indeeo Ṃajeḷ",
       translatedName: "Forever Marshall Islands",
@@ -1523,6 +1624,7 @@ const countries: Country[] = [
   {
     name: "Mauritania",
     iso: "mr",
+    capital: { name: "Nouakchott" },
     anthem: {
       name: "النشيد الوطني الموريتاني",
       translatedName: "National anthem of Mauritania",
@@ -1538,6 +1640,7 @@ const countries: Country[] = [
   {
     name: "Mauritius",
     iso: "mu",
+    capital: { name: "Port Louis" },
     anthem: {
       name: "Motherland",
       audio: {
@@ -1552,6 +1655,7 @@ const countries: Country[] = [
   {
     name: "Mexico",
     iso: "mx",
+    capital: { name: "Mexico City", obvious },
     anthem: {
       name: "Himno Nacional Mexicano",
       translatedName: "Mexican National Anthem",
@@ -1567,6 +1671,7 @@ const countries: Country[] = [
   {
     name: "Micronesia",
     iso: "fm",
+    capital: { name: "Palikir" },
     anthem: {
       name: "Patriots of Micronesia",
       audio: {
@@ -1581,6 +1686,7 @@ const countries: Country[] = [
   {
     name: "Moldova",
     iso: "md",
+    capital: { name: "Chișinău", hangmanName: "Chisinau" },
     anthem: {
       name: "Limba noastră",
       translatedName: "Our Language",
@@ -1596,6 +1702,7 @@ const countries: Country[] = [
   {
     name: "Monaco",
     iso: "mc",
+    capital: { name: "Monaco City", obvious },
     anthem: {
       name: "Hymne Monégasque",
       translatedName: "Monégasque Anthem",
@@ -1611,6 +1718,7 @@ const countries: Country[] = [
   {
     name: "Mongolia",
     iso: "mn",
+    capital: { name: "Ulaanbaatar" },
     anthem: {
       name: "Монгол Улсын төрийн дуулал",
       translatedName: "National anthem of Mongolia",
@@ -1626,6 +1734,7 @@ const countries: Country[] = [
   {
     name: "Montenegro",
     iso: "me",
+    capital: { name: "Podgorica" },
     anthem: {
       name: "Oj, svijetla majska zoro",
       translatedName: "O Bright Dawn of May",
@@ -1641,6 +1750,7 @@ const countries: Country[] = [
   {
     name: "Morocco",
     iso: "ma",
+    capital: { name: "Rabat" },
     anthem: {
       name: "النشيد الوطني المغربي",
       translatedName: "National Anthem of Morocco",
@@ -1656,6 +1766,7 @@ const countries: Country[] = [
   {
     name: "Mozambique",
     iso: "mz",
+    capital: { name: "Maputo" },
     anthem: {
       name: "Pátria Amada",
       translatedName: "Beloved Homeland",
@@ -1671,6 +1782,7 @@ const countries: Country[] = [
   {
     name: "Myanmar",
     iso: "mm",
+    capital: { name: "Naypyidaw" },
     anthem: {
       name: "ကမ္ဘာမကျေ",
       translatedName: "Till the End of the World",
@@ -1686,6 +1798,7 @@ const countries: Country[] = [
   {
     name: "Namibia",
     iso: "na",
+    capital: { name: "Windhoek" },
     anthem: {
       name: "Namibia, Land of the Brave",
       audio: {
@@ -1715,6 +1828,7 @@ const countries: Country[] = [
   {
     name: "Nepal",
     iso: "np",
+    capital: { name: "Kathmandu" },
     anthem: {
       name: "सयौँ थुँगा फूलका",
       translatedName: "Made of Hundreds of Flowers",
@@ -1730,6 +1844,7 @@ const countries: Country[] = [
   {
     name: "Netherlands",
     iso: "nl",
+    capital: { name: "Amsterdam" },
     anthem: {
       name: "Wilhelmus",
       audio: {
@@ -1744,6 +1859,7 @@ const countries: Country[] = [
   {
     name: "New Zealand",
     iso: "nz",
+    capital: { name: "Wellington" },
     anthem: {
       name: "God Defend New Zealand",
       audio: {
@@ -1758,6 +1874,7 @@ const countries: Country[] = [
   {
     name: "Nicaragua",
     iso: "ni",
+    capital: { name: "Managua" },
     anthem: {
       name: "Salve a ti, Nicaragua",
       translatedName: "Hail to thee, Nicaragua",
@@ -1773,6 +1890,7 @@ const countries: Country[] = [
   {
     name: "Niger",
     iso: "ne",
+    capital: { name: "Niamey" },
     anthem: {
       name: "L'Honneur de la Patrie",
       translatedName: "The Honor of the Fatherland",
@@ -1788,6 +1906,7 @@ const countries: Country[] = [
   {
     name: "Nigeria",
     iso: "ng",
+    capital: { name: "Abuja" },
     anthem: {
       name: "Nigeria, We Hail Thee",
       audio: {
@@ -1802,6 +1921,7 @@ const countries: Country[] = [
   {
     name: "North Korea",
     iso: "kp",
+    capital: { name: "Pyongyang" },
     anthem: {
       name: "애국가",
       translatedName: "Patriotic Song",
@@ -1817,6 +1937,7 @@ const countries: Country[] = [
   {
     name: "North Macedonia",
     iso: "mk",
+    capital: { name: "Skopje" },
     anthem: {
       name: "Денес над Македонија",
       translatedName: "Today over Macedonia",
@@ -1832,6 +1953,7 @@ const countries: Country[] = [
   {
     name: "Norway",
     iso: "no",
+    capital: { name: "Oslo" },
     anthem: {
       name: "Ja, vi elsker dette landet",
       translatedName: "Yes, We Love This Country",
@@ -1847,6 +1969,7 @@ const countries: Country[] = [
   {
     name: "Oman",
     iso: "om",
+    capital: { name: "Muscat" },
     anthem: {
       name: "نشيد السلام السلطاني",
       translatedName: "The Salute of the Sultan",
@@ -1862,6 +1985,7 @@ const countries: Country[] = [
   {
     name: "Pakistan",
     iso: "pk",
+    capital: { name: "Islamabad" },
     anthem: {
       name: "قومی ترانہ",
       translatedName: "National Anthem of Pakistan",
@@ -1877,6 +2001,7 @@ const countries: Country[] = [
   {
     name: "Palau",
     iso: "pw",
+    capital: { name: "Ngerulmud" },
     anthem: {
       name: "Belau rekid",
       translatedName: "Our Palau",
@@ -1907,6 +2032,7 @@ const countries: Country[] = [
   {
     name: "Panama",
     iso: "pa",
+    capital: { name: "Panama City", obvious },
     anthem: {
       name: "Himno Istmeño",
       translatedName: "National anthem of Panama",
@@ -1922,6 +2048,7 @@ const countries: Country[] = [
   {
     name: "Papua New Guinea",
     iso: "pg",
+    capital: { name: "Port Moresby" },
     anthem: {
       name: "O Arise, All You Sons",
       audio: {
@@ -1936,6 +2063,7 @@ const countries: Country[] = [
   {
     name: "Paraguay",
     iso: "py",
+    capital: { name: "Asunción", hangmanName: "Asuncion" },
     anthem: {
       name: "Himno Nacional Paraguayo",
       translatedName: "Paraguayan National Anthem",
@@ -1951,6 +2079,7 @@ const countries: Country[] = [
   {
     name: "Peru",
     iso: "pe",
+    capital: { name: "Lima" },
     anthem: {
       name: "Himno Nacional del Perú",
       translatedName: "National Anthem of Peru",
@@ -1966,6 +2095,7 @@ const countries: Country[] = [
   {
     name: "Philippines",
     iso: "ph",
+    capital: { name: "Manila" },
     anthem: {
       name: "Lupang Hinirang",
       translatedName: "Chosen Land",
@@ -1981,6 +2111,7 @@ const countries: Country[] = [
   {
     name: "Poland",
     iso: "pl",
+    capital: { name: "Warsaw" },
     anthem: {
       name: "Jeszcze Polska nie zginęła",
       translatedName: "Poland Is Not Yet Lost",
@@ -1996,6 +2127,7 @@ const countries: Country[] = [
   {
     name: "Portugal",
     iso: "pt",
+    capital: { name: "Lisbon" },
     anthem: {
       name: "A Portuguesa",
       translatedName: "The Portuguese",
@@ -2011,6 +2143,7 @@ const countries: Country[] = [
   {
     name: "Qatar",
     iso: "qa",
+    capital: { name: "Doha" },
     anthem: {
       name: "السلام الأميري",
       translatedName: "Peace to the Amir",
@@ -2026,6 +2159,7 @@ const countries: Country[] = [
   {
     name: "Republic of the Congo",
     iso: "cg",
+    capital: { name: "Brazzaville" },
     anthem: {
       name: "La Congolaise",
       translatedName: "The Congolese",
@@ -2041,6 +2175,7 @@ const countries: Country[] = [
   {
     name: "Romania",
     iso: "ro",
+    capital: { name: "Bucharest" },
     anthem: {
       name: "Deșteaptă-te, române!",
       translatedName: "Awaken Thee, Romanian!",
@@ -2056,6 +2191,7 @@ const countries: Country[] = [
   {
     name: "Russia",
     iso: "ru",
+    capital: { name: "Moscow" },
     anthem: {
       name: "Госуда́рственный гимн Росси́йской Федера́ции",
       translatedName: "State Anthem of the Russian Federation",
@@ -2071,6 +2207,7 @@ const countries: Country[] = [
   {
     name: "Rwanda",
     iso: "rw",
+    capital: { name: "Kigali" },
     anthem: {
       name: "Rwanda Nziza",
       translatedName: "Beautiful Rwanda",
@@ -2086,6 +2223,7 @@ const countries: Country[] = [
   {
     name: "Saint Kitts and Nevis",
     iso: "kn",
+    capital: { name: "Basseterre" },
     anthem: {
       name: "O Land of Beauty!",
       audio: {
@@ -2100,6 +2238,7 @@ const countries: Country[] = [
   {
     name: "Saint Lucia",
     iso: "lc",
+    capital: { name: "Castries" },
     anthem: {
       name: "Sons and Daughters of Saint Lucia",
       audio: {
@@ -2114,6 +2253,7 @@ const countries: Country[] = [
   {
     name: "Saint Vincent and the Grenadines",
     iso: "vc",
+    capital: { name: "Kingstown" },
     anthem: {
       name: "Saint Vincent, Land so Beautiful",
       audio: {
@@ -2128,6 +2268,7 @@ const countries: Country[] = [
   {
     name: "Samoa",
     iso: "ws",
+    capital: { name: "Apia" },
     anthem: {
       name: "O Le Fuʻa o Le Saʻolotoga o Sāmoa",
       translatedName: "The Banner of Freedom",
@@ -2143,6 +2284,7 @@ const countries: Country[] = [
   {
     name: "San Marino",
     iso: "sm",
+    capital: { name: "City of San Marino", obvious },
     anthem: {
       name: "Inno Nazionale della Repubblica di San Marino",
       translatedName: "National Anthem of the Republic of San Marino",
@@ -2158,6 +2300,7 @@ const countries: Country[] = [
   {
     name: "Sao Tome and Principe",
     iso: "st",
+    capital: { name: "São Tomé", hangmanName: "Sao Tome", obvious },
     anthem: {
       name: "Independência total",
       translatedName: "Total Independence",
@@ -2173,6 +2316,7 @@ const countries: Country[] = [
   {
     name: "Saudi Arabia",
     iso: "sa",
+    capital: { name: "Riyadh" },
     anthem: {
       name: "النشيد الوطني السعودي",
       translatedName: "Chant of the Saudi Nation",
@@ -2188,6 +2332,7 @@ const countries: Country[] = [
   {
     name: "Senegal",
     iso: "sn",
+    capital: { name: "Dakar" },
     anthem: {
       name: "Le Lion rouge",
       translatedName: "The Red Lion",
@@ -2203,6 +2348,7 @@ const countries: Country[] = [
   {
     name: "Serbia",
     iso: "rs",
+    capital: { name: "Belgrade" },
     anthem: {
       name: "Боже правде",
       translatedName: "God of Justice",
@@ -2218,6 +2364,7 @@ const countries: Country[] = [
   {
     name: "Seychelles",
     iso: "sc",
+    capital: { name: "Victoria" },
     anthem: {
       name: "Koste Seselwa",
       translatedName: "Join together all Seychellois",
@@ -2233,6 +2380,7 @@ const countries: Country[] = [
   {
     name: "Sierra Leone",
     iso: "sl",
+    capital: { name: "Freetown" },
     anthem: {
       name: "High We Exalt Thee, Realm of the Free",
       audio: {
@@ -2262,6 +2410,7 @@ const countries: Country[] = [
   {
     name: "Slovakia",
     iso: "sk",
+    capital: { name: "Bratislava" },
     anthem: {
       name: "Nad Tatrou sa blýska",
       translatedName: "Lightning Over the Tatras",
@@ -2277,6 +2426,7 @@ const countries: Country[] = [
   {
     name: "Slovenia",
     iso: "si",
+    capital: { name: "Ljubljana" },
     anthem: {
       name: "Zdravljica",
       translatedName: "Toast",
@@ -2292,6 +2442,7 @@ const countries: Country[] = [
   {
     name: "Solomon Islands",
     iso: "sb",
+    capital: { name: "Honiara" },
     anthem: {
       name: "God Save Our Solomon Islands",
       audio: {
@@ -2306,6 +2457,7 @@ const countries: Country[] = [
   {
     name: "Somalia",
     iso: "so",
+    capital: { name: "Mogadishu" },
     anthem: {
       name: "Qolobaa Calankeed",
       translatedName: "Every nation has its own flag",
@@ -2321,6 +2473,7 @@ const countries: Country[] = [
   {
     name: "South Africa",
     iso: "za",
+    capital: { name: "Pretoria" },
     anthem: {
       name: "National Anthem of South Africa",
       audio: {
@@ -2335,6 +2488,7 @@ const countries: Country[] = [
   {
     name: "South Korea",
     iso: "kr",
+    capital: { name: "Seoul" },
     anthem: {
       name: "애국가",
       translatedName: "Patriotic Song",
@@ -2350,6 +2504,7 @@ const countries: Country[] = [
   {
     name: "South Sudan",
     iso: "ss",
+    capital: { name: "Juba" },
     anthem: {
       name: "South Sudan Oyee!",
       translatedName: "South Sudan Hurrah!",
@@ -2365,6 +2520,7 @@ const countries: Country[] = [
   {
     name: "Spain",
     iso: "es",
+    capital: { name: "Madrid" },
     anthem: {
       name: "Marcha Real",
       translatedName: "Royal March",
@@ -2380,6 +2536,7 @@ const countries: Country[] = [
   {
     name: "Sri Lanka",
     iso: "lk",
+    capital: { name: "Sri Jayawardenepura Kotte" },
     anthem: {
       name: "ශ්‍රී ලංකා මාතා",
       translatedName: "Mother Sri Lanka",
@@ -2395,6 +2552,7 @@ const countries: Country[] = [
   {
     name: "Sudan",
     iso: "sd",
+    capital: { name: "Khartoum" },
     anthem: {
       name: "نحن جند الله جند الوطن",
       translatedName: "We are Soldiers of God, Soldiers of the Homeland",
@@ -2410,6 +2568,7 @@ const countries: Country[] = [
   {
     name: "Suriname",
     iso: "sr",
+    capital: { name: "Paramaribo" },
     anthem: {
       name: "God zij met ons Suriname",
       translatedName: "God be with our Suriname",
@@ -2425,6 +2584,7 @@ const countries: Country[] = [
   {
     name: "Sweden",
     iso: "se",
+    capital: { name: "Stockholm" },
     anthem: {
       name: "Du gamla, du fria",
       translatedName: "You ancient, you free",
@@ -2452,7 +2612,7 @@ const countries: Country[] = [
       },
     },
   },
-  { name: "Syria", iso: "sy" },
+  { name: "Syria", iso: "sy", capital: { name: "Damascus" } },
   {
     name: "Taiwan",
     iso: "tw",
@@ -2471,6 +2631,7 @@ const countries: Country[] = [
   {
     name: "Tajikistan",
     iso: "tj",
+    capital: { name: "Dushanbe" },
     anthem: {
       name: "Суруди Миллӣ",
       translatedName: "National Anthem",
@@ -2486,6 +2647,7 @@ const countries: Country[] = [
   {
     name: "Tanzania",
     iso: "tz",
+    capital: { name: "Dodoma" },
     anthem: {
       name: "Mungu ibariki Afrika",
       translatedName: "God bless Africa",
@@ -2501,6 +2663,7 @@ const countries: Country[] = [
   {
     name: "Thailand",
     iso: "th",
+    capital: { name: "Bangkok" },
     anthem: {
       name: "เพลงชาติไทย",
       translatedName: "Thai National Anthem",
@@ -2516,6 +2679,7 @@ const countries: Country[] = [
   {
     name: "The Bahamas",
     iso: "bs",
+    capital: { name: "Nassau" },
     anthem: {
       name: "March On, Bahamaland",
       audio: {
@@ -2530,6 +2694,7 @@ const countries: Country[] = [
   {
     name: "The Gambia",
     iso: "gm",
+    capital: { name: "Banjul" },
     anthem: {
       name: "For The Gambia Our Homeland",
       audio: {
@@ -2544,6 +2709,7 @@ const countries: Country[] = [
   {
     name: "Timor-Leste",
     iso: "tl",
+    capital: { name: "Dili" },
     anthem: {
       name: "Pátria",
       translatedName: "Fatherland",
@@ -2559,6 +2725,7 @@ const countries: Country[] = [
   {
     name: "Togo",
     iso: "tg",
+    capital: { name: "Lomé", hangmanName: "Lome" },
     anthem: {
       name: "Terre de nos aïeux",
       translatedName: "Land of our forefathers",
@@ -2574,6 +2741,7 @@ const countries: Country[] = [
   {
     name: "Tonga",
     iso: "to",
+    capital: { name: "Nuku'alofa", hangmanName: "Nukualofa" },
     anthem: {
       name: "Ko e fasi ʻo e tuʻi ʻo e ʻOtu Tonga",
       translatedName: "Song of the King of the Tongan Islands",
@@ -2589,6 +2757,7 @@ const countries: Country[] = [
   {
     name: "Trinidad and Tobago",
     iso: "tt",
+    capital: { name: "Port of Spain" },
     anthem: {
       name: "Forged from the Love of Liberty",
       audio: {
@@ -2603,6 +2772,7 @@ const countries: Country[] = [
   {
     name: "Tunisia",
     iso: "tn",
+    capital: { name: "Tunis", obvious },
     anthem: {
       name: "حماة الحمى",
       translatedName: "Defenders of the Homeland",
@@ -2618,6 +2788,7 @@ const countries: Country[] = [
   {
     name: "Turkey",
     iso: "tr",
+    capital: { name: "Ankara" },
     anthem: {
       name: "İstiklal Marşı",
       translatedName: "Independence March",
@@ -2633,6 +2804,7 @@ const countries: Country[] = [
   {
     name: "Turkmenistan",
     iso: "tm",
+    capital: { name: "Ashgabat" },
     anthem: {
       name: "Garaşsyz, Bitarap Türkmenistanyň Döwlet Gimni",
       translatedName: "State Anthem of Independent, Neutral Turkmenistan",
@@ -2648,6 +2820,7 @@ const countries: Country[] = [
   {
     name: "Tuvalu",
     iso: "tv",
+    capital: { name: "Funafuti" },
     anthem: {
       name: "Tuvalu mo te Atua",
       translatedName: "Tuvalu for the Almighty",
@@ -2663,6 +2836,7 @@ const countries: Country[] = [
   {
     name: "Uganda",
     iso: "ug",
+    capital: { name: "Kampala" },
     anthem: {
       name: "Oh Uganda, Land of Beauty",
       audio: {
@@ -2677,6 +2851,7 @@ const countries: Country[] = [
   {
     name: "Ukraine",
     iso: "ua",
+    capital: { name: "Kyiv" },
     anthem: {
       name: "Державний гімн України",
       translatedName: "State Anthem of Ukraine",
@@ -2692,6 +2867,7 @@ const countries: Country[] = [
   {
     name: "United Arab Emirates",
     iso: "ae",
+    capital: { name: "Abu Dhabi" },
     anthem: {
       name: "النشيد الوطني الإماراتي",
       translatedName: "Long Live my Nation",
@@ -2707,6 +2883,7 @@ const countries: Country[] = [
   {
     name: "United Kingdom",
     iso: "gb",
+    capital: { name: "London" },
     anthem: {
       name: "God Save the King",
       audio: {
@@ -2721,6 +2898,7 @@ const countries: Country[] = [
   {
     name: "United States",
     iso: "us",
+    capital: { name: "Washington" },
     anthem: {
       name: "The Star-Spangled Banner",
       audio: {
@@ -2735,6 +2913,7 @@ const countries: Country[] = [
   {
     name: "Uruguay",
     iso: "uy",
+    capital: { name: "Montevideo" },
     anthem: {
       name: "Himno Nacional de Uruguay",
       translatedName: "National Anthem of Uruguay",
@@ -2750,6 +2929,7 @@ const countries: Country[] = [
   {
     name: "Uzbekistan",
     iso: "uz",
+    capital: { name: "Tashkent" },
     anthem: {
       name: "Oʻzbekiston Respublikasining Davlat Madhiyasi",
       translatedName: "State Anthem of the Republic of Uzbekistan",
@@ -2765,6 +2945,7 @@ const countries: Country[] = [
   {
     name: "Vanuatu",
     iso: "vu",
+    capital: { name: "Port Vila" },
     anthem: {
       name: "Yumi, Yumi, Yumi",
       translatedName: "We are, We are, We are",
@@ -2795,6 +2976,7 @@ const countries: Country[] = [
   {
     name: "Venezuela",
     iso: "ve",
+    capital: { name: "Caracas" },
     anthem: {
       name: "Gloria al Bravo Pueblo",
       translatedName: "Glory to the Brave People",
@@ -2810,6 +2992,7 @@ const countries: Country[] = [
   {
     name: "Vietnam",
     iso: "vn",
+    capital: { name: "Hanoi" },
     anthem: {
       name: "Tiến Quân Ca",
       translatedName: "The Song of the Marching Troops",
@@ -2825,6 +3008,7 @@ const countries: Country[] = [
   {
     name: "Yemen",
     iso: "ye",
+    capital: { name: "Sanaa" },
     anthem: {
       name: "الجمهورية المتحدة",
       translatedName: "United Republic",
@@ -2837,10 +3021,11 @@ const countries: Country[] = [
       },
     },
   },
-  { name: "Zambia", iso: "zm" },
+  { name: "Zambia", iso: "zm", capital: { name: "Lusaka" } },
   {
     name: "Zimbabwe",
     iso: "zw",
+    capital: { name: "Harare" },
     anthem: {
       name: "Ngaikomborerwe Nyika yeZimbabwe",
       translatedName: "Blessed be the land of Zimbabwe",

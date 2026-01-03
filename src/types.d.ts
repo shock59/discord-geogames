@@ -19,6 +19,7 @@ type AnthemAudio = {
 type Country = {
   name: string;
   iso: string;
+  capital?: { name: string; hangmanName?: string; obvious?: true };
   anthem?: {
     name: string;
     translatedName?: string;
