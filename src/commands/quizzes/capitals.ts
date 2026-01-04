@@ -26,6 +26,8 @@ const capitals: Subcommand = {
         .setRequired(false)
     ),
   async execute(interaction) {
+    const reversed = !!interaction.options.getBoolean("reverse", false);
+
     const validCapitals = countries.filter(
       (country) => country.capital && !country.capital.obvious
     );
@@ -34,14 +36,18 @@ const capitals: Subcommand = {
       () =>
         multipleRandomFromArray(validCapitals, 4, true).map((country) => ({
           id: country.iso,
-          displayName: country.capital!.name,
+          displayName: reversed ? country.name : country.capital!.name,
           answerDisplayName: `:flag_${country.iso}: ${country.capital!.name}, ${
             country.name
           }`,
-          questionText: `What is the capital of :flag_${country.iso}: **${country.name}**?`,
+          questionText: `What ${
+            reversed
+              ? `country is **${country.capital!.name}** the capital of?`
+              : `is the capital of :flag_${country.iso}: **${country.name}**?`
+          }`,
         })),
       "text",
-      "Guess the capital city",
+      `Guess the ${reversed ? "country from the " : ""}capital city`,
       true,
       15
     );
