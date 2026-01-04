@@ -18,11 +18,12 @@ import {
 } from "discord.js";
 import { shuffleArray } from "./arrays.js";
 
-type QuestionType = "image" | "video";
+type QuestionType = "image" | "video" | "text";
 type Choice = {
   id: string;
   displayName: string;
   answerDisplayName?: string;
+  questionText?: string;
   imageUrl?: string;
   attribution?: string;
 };
@@ -61,6 +62,12 @@ export default async function quiz(
     container.addMediaGalleryComponents(
       new MediaGalleryBuilder().addItems(
         new MediaGalleryItemBuilder().setURL(correctChoice.imageUrl ?? "")
+      )
+    );
+  } else if (questionType == "text") {
+    container.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(
+        correctChoice.questionText ?? "undefined"
       )
     );
   }
@@ -216,22 +223,21 @@ function resultsContainer(
     );
 
     container.addSectionComponents(section);
-  }
-  if (questionType == "video") {
-    container
-      .addTextDisplayComponents(
-        new TextDisplayBuilder().setContent(`The correct answer was`),
-        new TextDisplayBuilder().setContent(
-          `### ${correctChoice.answerDisplayName ?? correctChoice.displayName}`
-        )
+  } else {
+    container.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(`The correct answer was`),
+      new TextDisplayBuilder().setContent(
+        `### ${correctChoice.answerDisplayName ?? correctChoice.displayName}`
       )
-      .addMediaGalleryComponents(
-        new MediaGalleryBuilder().addItems(
-          new MediaGalleryItemBuilder().setURL(correctChoice.imageUrl ?? "")
-        )
-      );
+    );
+  }
 
-    console.log(container.toJSON().components.toString());
+  if (questionType == "video") {
+    container.addMediaGalleryComponents(
+      new MediaGalleryBuilder().addItems(
+        new MediaGalleryItemBuilder().setURL(correctChoice.imageUrl ?? "")
+      )
+    );
   }
 
   container
